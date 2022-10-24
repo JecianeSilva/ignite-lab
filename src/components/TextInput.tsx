@@ -14,11 +14,10 @@ function TextInputRoot(props: TextInputRootProps){
     disabled = Boolean(props.disabled)
     return(
         <div className={clsx(
-            'flex items-center gap-3 h-12 py-4 px-3 rounded bg-gray-700 w-full',
+            'flex items-center gap-3 h-12 py-4 px-3 rounded bg-gray-700 w-full hover:ring-2 focus:ring-2 ring-green-500',
             {
-                'hover:ring-2 focus:ring-2 ring-green-500': props.error === false && props.disabled === false,
                 'ring-2 ring-error': props.error === true,
-                'cursor-not-allowed': props.disabled === true
+                'cursor-not-allowed hover:ring-0': props.disabled === true
             }
         )}>
             {props.children}

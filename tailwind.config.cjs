@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const linear = 'linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(2, 153, 108, 0) 88.78%, rgba(1, 182, 129, 0.0544731) 96.13%, rgba(0, 255, 181, 0.189) 106.08%, rgba(0, 0, 0, 0.8))'
+
 module.exports = {
   content: [
     './src/**/*.tsx'
@@ -14,7 +16,7 @@ module.exports = {
     },
     colors:{
       transparent: 'transparent',
-
+      
       black: '#000000',
       white: '#FFFFFF',
       
@@ -42,6 +44,9 @@ module.exports = {
     extend: {
       fontFamily:{
         sans: 'Inter, sans-serif'
+      },
+      backgroundImage: {
+        image: 'linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(2, 153, 108, 0) 88.78%, rgba(1, 182, 129, 0.0544731) 96.13%, rgba(0, 255, 181, 0.189) 106.08%, rgba(0, 0, 0, 0.8)), url("./src/img/background-image.png")'
       }
     },
   },
